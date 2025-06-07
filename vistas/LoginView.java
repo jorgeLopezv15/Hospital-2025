@@ -19,7 +19,7 @@ public class LoginView {
         panelLogin = new JPanel();
         panelLogin.setSize(500,800);
         panelLogin.setOpaque(true);
-        panelLogin.setBackground(Color.PINK);
+        panelLogin.setBackground(Color.WHITE);
         panelLogin.setLayout(new GridBagLayout());
 
         GridBagConstraints gbc = new GridBagConstraints();
@@ -27,7 +27,7 @@ public class LoginView {
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.weightx = 1.0;
 
-        // Título
+        // login
         JLabel titulo = new JLabel("Login", SwingConstants.CENTER);
         gbc.anchor = GridBagConstraints.CENTER;
         gbc.gridx = 0;
@@ -35,20 +35,20 @@ public class LoginView {
         gbc.gridwidth = 2;
         panelLogin.add(titulo, gbc);
 
-        // Entrada de correo
+        // correo
         JTextField entradaCorreo = new JTextField("Usuario: ");
         gbc.gridx = 1;
         gbc.gridy = 1;
         panelLogin.add(entradaCorreo, gbc);
 
-        // Entrada contraseña
+        // contraseña
         JPasswordField entradaContra = new JPasswordField("Contraseña: ");
         entradaContra.setSize(new Dimension(100, 50));
         gbc.gridx = 1;
         gbc.gridy = 2;
         panelLogin.add(entradaContra, gbc);
 
-        // Botón
+        // boton
         JButton entradaBoton = new JButton("Iniciar");
         entradaBoton.setPreferredSize(new Dimension(100, 30));
         gbc.gridx = 1;
@@ -57,7 +57,7 @@ public class LoginView {
         gbc.fill = GridBagConstraints.NONE;
         panelLogin.add(entradaBoton, gbc);
 
-        // Acción del botón
+        
         entradaBoton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
