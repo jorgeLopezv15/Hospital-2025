@@ -7,7 +7,7 @@ import java.awt.Insets;
 import java.awt.event.*;
 import javax.swing.*;
 
-import control.LoginControler;
+import control.LoginControl;
 import vistas.*;
 
 public class LoginView {
@@ -117,7 +117,7 @@ public class LoginView {
                     return;
                 }
                 
-                if (new LoginControler().validacionDatos(entradaUsuario, entradaContra)) {
+                if (new LoginControl().validacionDatos(entradaUsuario, entradaContra)) {
                     new DashBoard();
                     JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(loginPanel);
                     frame.dispose();
