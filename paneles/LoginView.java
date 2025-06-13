@@ -1,6 +1,4 @@
 package paneles;
-import ventanas.*;
-
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
@@ -10,6 +8,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 import control.LoginControler;
+import vistas.*;
 
 public class LoginView {
     private JPanel loginPanel;
