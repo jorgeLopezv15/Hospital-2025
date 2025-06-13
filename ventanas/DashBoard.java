@@ -1,22 +1,26 @@
-package ventanas;
-import java.awt.Color;
 
+package ventanas;
+
+import java.awt.BorderLayout;
 import javax.swing.JFrame;
+
+import paneles.DiseñoPanel;
+import paneles.EntradaDeDatosPanel;
 
 public class DashBoard extends JFrame {
     
-
- 
-    public DashBoard(){
+    public DashBoard() {
+        setTitle("hospital");
+        setSize(1200, 700);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        this.setLayout(new BorderLayout());
+        this.add(new DiseñoPanel().getPanel(),BorderLayout.NORTH);
+        this.add(new EntradaDeDatosPanel().getPanel(),BorderLayout.EAST);
         
-        this.setTitle("DashBoard");
-        this.setSize(1920,1080);
-        this.setVisible(true);
-        this.setBackground(Color.GREEN);
-       
+        Tabla tabla = new Tabla();
+        this.add(tabla, BorderLayout.EAST); 
         
+    
+        setVisible(true);
     }
-   public JFrame getJFrame(){
-return this;
-   }
 }

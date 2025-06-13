@@ -1,10 +1,12 @@
+
 package control;
 
 public class LoginControler {
     
     String[][] usuariosYContraseñas = {
-        {"leomessi", "12345"},       // Dato original
-        {"alberteinstein", "intel647"},    // +10 nuevos pares
+
+        {"leomessi", "12345"},       
+        {"alberteinstein", "intel647"},    
         {"benito", "54321"},
         {"icecube", "ice0"},
         {"tupac", "pac56"},
@@ -14,15 +16,14 @@ public class LoginControler {
         {"Jhonny", "Matematica"},
         {"jinSakai", "GhostOfTushima"},
         {"Etzio", "Auditore"}
+        
     };
 
     public boolean validacionDatos(String EntradaUsuario, String EntradaContraseña) {
-
         for (int i = 0; i < usuariosYContraseñas.length; i++) {
             String usuarioCorrecto = usuariosYContraseñas[i][0];
             String contraseñaCorrecta = usuariosYContraseñas[i][1];
             
-         
             if (usuarioCorrecto.equals(EntradaUsuario) && 
                 contraseñaCorrecta.equals(EntradaContraseña)) {
                 return true; 
